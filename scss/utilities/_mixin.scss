@@ -1,0 +1,78 @@
+@mixin titulares{
+    gap: 1rem;
+    padding: 1rem 4rem;
+    text-align: left;
+    h1{
+        font-size: 1.7rem;
+        align-self: flex-start;
+        font-weight: bold;
+    }
+    p{
+        font-size: 1.35rem;
+        border-left: solid 3px $color-botones;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@mixin boton-relleno {
+    background-color: $color-botones;
+    border: none;
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
+    font-weight: bold;
+    a{
+        text-decoration: none;
+        color: $color-secundario;
+    }
+}
+@mixin boton-vacio {
+    background-color: $color-principal;
+    color: $color-secundario;
+    border: solid 3px $color-secundario;
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
+    font-weight: bold;
+    a{
+        text-decoration: none;
+        color: $color-secundario;
+    }
+}
+
+@mixin barra-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $color-principal;
+    grid-area: menu;
+    a{
+        text-decoration: none;
+        color: $color-secundario;
+    }
+    ul{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        list-style: none;
+        color: $color-secundario;
+        li{
+            button{
+                @include boton-relleno;
+            }
+        }
+    }
+}
+
+@mixin pie{
+    footer{
+        @extend %flex-col;
+        gap: 0.3rem;
+        background-color: $color-principal;
+        grid-area: footer;
+        color: $color-secundario;
+        h3{
+            font-size: 0.8rem;
+            font-weight: lighter;
+        }
+    }
+}
