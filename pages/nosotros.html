@@ -31,7 +31,7 @@
             </nav>
             <nav class="navbar navbar-dark bg-nav fixed-top">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="../index.html"><img src="../img/demolab-logo.png" alt="" height="50" class="d-inline-block align-text-top"></a>
+                  <a class="navbar-brand" href="../index.html"><img src="../img/demolab-logo.png" alt="logo demolab" height="50" class="d-inline-block align-text-top"></a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -75,30 +75,29 @@
             <img src="../img/portada-nosotros.jpg" alt="Impresora 3D imprime letras 3D azules">
         </section>
         <!-- Proceso de impresión -->
-        <section class="formulario">
-            <h2>¿Cómo podemos ayudarte?</h2>
-            <div class="row">
-                <div class="col nombre">
-                  <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
-                </div>
-                <div class="col correo">
-                  <input type="text" class="form-control" placeholder="Correo" aria-label="Correo">
-                </div>
-            </div>
-            <div class="row mb-3 cuadro">
-                <label for="exampleFormControlTextarea1" class="form-label" >Example textarea</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" placeholder="Mensaje"></textarea>
-              </div>
-            <button><a href="#">Enviar</a></button>
-        </section>
+        <form class="formulario row g-3">
+          <h2 class="text-center mt-5">¿Cómo podemos ayudarte?</h2>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+          </div>
+          <div class="form-floating">
+            <textarea class="form-control mb-5" placeholder="Leave a comment here" id="floatingTextarea2"
+              style="height: 60vh"></textarea>
+            <label for="floatingTextarea2">Comments</label>
+          </div>
+          <button class="enviar"><a href="#">Enviar</a></button>
+        </form>
         
         <!-- Pie de página -->
         <footer>
             <h3>Diseñado y desarrollado por Diego Esquivel</h3>
             <div>
-                <a href="#"><img src="../img/facebook-icon.png" alt="logo de facebook"></a>
-                <a href="#"><img src="../img/instagram-icon.png" alt="logo de instagram"></a>
-            </div>
+              <a href="https://www.facebook.com/" target="_blank"><img src="../img/facebook-icon.png" alt="logo de facebook"></a>
+              <a href="https://www.instagram.com/" target="_blank"><img src="../img/instagram-icon.png" alt="logo de instagram"></a>
+          </div>
         </footer>
     </div>
     <!-- JavaScript Bundle with Popper -->

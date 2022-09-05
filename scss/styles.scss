@@ -274,13 +274,15 @@
         grid-area: foto;
         img{
             height: 100%;
-            width: 100%
+            width: 100%;
+            
         }
     }
     .formulario{
         grid-area: formulario;
         background-color: $color-principal;
         @extend %flex-col;
+        padding: 20%;
         h2{
             color: $color-secundario;
             text-align: center;
@@ -289,20 +291,7 @@
         }
         button {
             @include boton-relleno;
-        }
-        .row{
-            width: 500px;
-            .col{
-                padding: 0.5rem;
-                input{
-                    border-radius: 25px;
-                }
-            }
-        }
-        .cuadro{
-            textarea{
-                border-radius: 25px;
-            }
+            width: 8rem;
         }
         button{
             margin: 2rem;
@@ -505,6 +494,15 @@
                 display: none;
             }
         }
+        .principal{
+            .centrado{
+                @include titulares-movil;
+                .botones{
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
         .foto{
             img{
                 display: none;
@@ -544,6 +542,11 @@
                 display: none;
             }
         }
+        .principal{
+            .centrado{
+                @include titulares-movil;
+            }
+        }
     }
     .contenedor-materiales{
         .menu{
@@ -579,6 +582,11 @@
                 transform: scale(1.5);
             }
         }
+        .principal{
+            .centrado{
+                @include titulares-movil;
+            }
+        }
     }
     .contenedor-nosotros{
         .menu{
@@ -598,6 +606,14 @@
             .desplegado{
                 display: none;
             }
+        }
+        .principal{
+            .centrado{
+                @include titulares-movil;
+            }
+        }
+        .formulario{
+            padding: 5%;
         }
     }
     .contenedor-cotiza{
@@ -619,6 +635,36 @@
                 display: none;
             }
         }
+        .principal{
+            .centrado{
+                @include titulares-movil;
+                .botones{
+                    align-self: center;
+                    justify-content: center;
+                    align-items: center;
+                    .boton1{
+                        a{
+                            font-size: 0.9rem;
+                        }
+                    }
+                    .boton2{
+                        a{
+                            font-size: 0.9rem;
+                        }
+                    }
+                    .boton3{
+                        a{
+                            font-size: 0.9rem;
+                        }
+                    }
+                }
+            }
+        }
+        .banner{
+            img{
+                width: 50%;
+            }
+        }
     }
 }
 @media screen and (max-width:480px){
@@ -629,7 +675,7 @@
         "principal principal"
         "proceso proceso"
         "footer footer";
-        height: 190vh;
+        height: 220vh;
         .principal{
             .centrado{
                 h1{
@@ -673,10 +719,13 @@
                     width: 80%;
                 }
             }
+            button{
+                margin-top: 5rem;
+            }
         }
     }
     .contenedor-materiales{
-        grid-template-rows: 10vh 1fr 7fr 15vh;
+        grid-template-rows: 10vh 1fr 9fr 15vh;
         .grilla-materiales{
             grid-template-columns:1fr;
             grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;

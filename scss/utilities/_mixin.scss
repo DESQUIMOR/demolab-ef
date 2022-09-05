@@ -14,6 +14,24 @@
         padding-right: 1rem;
     }
 }
+@mixin titulares-movil{
+    gap: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    h1{
+        font-size: 1.7rem;
+        align-self: center;
+        font-weight: bold;
+    }
+    p{
+        font-size: 1.35rem;
+        border-top: solid 3px $color-botones;
+        border-left: none;
+        padding-top: 1rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+}
 
 @mixin boton-relleno {
     background-color: $color-botones;
@@ -25,6 +43,9 @@
         text-decoration: none;
         color: $color-secundario;
     }
+}
+@mixin boton-hover {
+    font-size: 1.2rem;
 }
 @mixin boton-vacio {
     background-color: $color-principal;
@@ -55,7 +76,12 @@
         gap: 2rem;
         list-style: none;
         color: $color-secundario;
-        li{
+        li{ 
+            a:hover{
+                padding: 0rem;
+                background-color: $color-hover;
+                border-radius: 0.5rem;
+            }
             button{
                 @include boton-relleno;
             }

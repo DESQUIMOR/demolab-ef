@@ -36,6 +36,10 @@
       gap: 2rem;
       list-style: none;
       color: #f2f1f1; }
+      .contenedor .menu ul li a:hover {
+        padding: 0rem;
+        background-color: #E68484;
+        border-radius: 0.5rem; }
       .contenedor .menu ul li button {
         background-color: #de3f3f;
         border: none;
@@ -156,6 +160,10 @@
       gap: 2rem;
       list-style: none;
       color: #f2f1f1; }
+      .contenedor-servicios .menu ul li a:hover {
+        padding: 0rem;
+        background-color: #E68484;
+        border-radius: 0.5rem; }
       .contenedor-servicios .menu ul li button {
         background-color: #de3f3f;
         border: none;
@@ -245,6 +253,10 @@
       gap: 2rem;
       list-style: none;
       color: #f2f1f1; }
+      .contenedor-materiales .menu ul li a:hover {
+        padding: 0rem;
+        background-color: #E68484;
+        border-radius: 0.5rem; }
       .contenedor-materiales .menu ul li button {
         background-color: #de3f3f;
         border: none;
@@ -336,6 +348,10 @@
       gap: 2rem;
       list-style: none;
       color: #f2f1f1; }
+      .contenedor-nosotros .menu ul li a:hover {
+        padding: 0rem;
+        background-color: #E68484;
+        border-radius: 0.5rem; }
       .contenedor-nosotros .menu ul li button {
         background-color: #de3f3f;
         border: none;
@@ -380,7 +396,8 @@
       width: 100%; }
   .contenedor-nosotros .formulario {
     grid-area: formulario;
-    background-color: #21283f; }
+    background-color: #21283f;
+    padding: 20%; }
     .contenedor-nosotros .formulario h2 {
       color: #f2f1f1;
       text-align: center;
@@ -390,18 +407,11 @@
       border: none;
       padding: 0.5rem 2rem;
       border-radius: 2rem;
-      font-weight: bold; }
+      font-weight: bold;
+      width: 8rem; }
       .contenedor-nosotros .formulario button a {
         text-decoration: none;
         color: #f2f1f1; }
-    .contenedor-nosotros .formulario .row {
-      width: 500px; }
-      .contenedor-nosotros .formulario .row .col {
-        padding: 0.5rem; }
-        .contenedor-nosotros .formulario .row .col input {
-          border-radius: 25px; }
-    .contenedor-nosotros .formulario .cuadro textarea {
-      border-radius: 25px; }
     .contenedor-nosotros .formulario button {
       margin: 2rem; }
   .contenedor-nosotros footer {
@@ -435,6 +445,10 @@
       gap: 2rem;
       list-style: none;
       color: #f2f1f1; }
+      .contenedor-cotiza .menu ul li a:hover {
+        padding: 0rem;
+        background-color: #E68484;
+        border-radius: 0.5rem; }
       .contenedor-cotiza .menu ul li button {
         background-color: #de3f3f;
         border: none;
@@ -588,6 +602,10 @@
         gap: 2rem;
         list-style: none;
         color: #f2f1f1; }
+        .contenedor .menu ul li a:hover {
+          padding: 0rem;
+          background-color: #E68484;
+          border-radius: 0.5rem; }
         .contenedor .menu ul li button {
           background-color: #de3f3f;
           border: none;
@@ -607,6 +625,24 @@
         display: none; }
       .contenedor .menu .desplegado {
         display: none; }
+    .contenedor .principal .centrado {
+      gap: 1rem;
+      padding: 1.5rem;
+      text-align: center; }
+      .contenedor .principal .centrado h1 {
+        font-size: 1.7rem;
+        align-self: center;
+        font-weight: bold; }
+      .contenedor .principal .centrado p {
+        font-size: 1.35rem;
+        border-top: solid 3px #de3f3f;
+        border-left: none;
+        padding-top: 1rem;
+        padding-left: 0rem;
+        padding-right: 0rem; }
+      .contenedor .principal .centrado .botones {
+        justify-content: center;
+        align-items: center; }
     .contenedor .foto img {
       display: none; }
     .contenedor .proceso {
@@ -635,6 +671,10 @@
       gap: 2rem;
       list-style: none;
       color: #f2f1f1; }
+      .contenedor-servicios .menu ul li a:hover {
+        padding: 0rem;
+        background-color: #E68484;
+        border-radius: 0.5rem; }
       .contenedor-servicios .menu ul li button {
         background-color: #de3f3f;
         border: none;
@@ -654,6 +694,21 @@
       display: none; }
     .contenedor-servicios .menu .desplegado {
       display: none; }
+  .contenedor-servicios .principal .centrado {
+    gap: 1rem;
+    padding: 1.5rem;
+    text-align: center; }
+    .contenedor-servicios .principal .centrado h1 {
+      font-size: 1.7rem;
+      align-self: center;
+      font-weight: bold; }
+    .contenedor-servicios .principal .centrado p {
+      font-size: 1.35rem;
+      border-top: solid 3px #de3f3f;
+      border-left: none;
+      padding-top: 1rem;
+      padding-left: 0rem;
+      padding-right: 0rem; }
   .contenedor-materiales {
     grid-template-rows: 10vh 1fr 14fr 15vh; }
     .contenedor-materiales .menu {
@@ -671,6 +726,10 @@
         gap: 2rem;
         list-style: none;
         color: #f2f1f1; }
+        .contenedor-materiales .menu ul li a:hover {
+          padding: 0rem;
+          background-color: #E68484;
+          border-radius: 0.5rem; }
         .contenedor-materiales .menu ul li button {
           background-color: #de3f3f;
           border: none;
@@ -696,6 +755,21 @@
       grid-template-areas: "img-uno" "img-dos" "img-tres" "img-cuatro" "img-cinco" "img-seis"; }
       .contenedor-materiales .grilla-materiales img {
         transform: scale(1.5); }
+    .contenedor-materiales .principal .centrado {
+      gap: 1rem;
+      padding: 1.5rem;
+      text-align: center; }
+      .contenedor-materiales .principal .centrado h1 {
+        font-size: 1.7rem;
+        align-self: center;
+        font-weight: bold; }
+      .contenedor-materiales .principal .centrado p {
+        font-size: 1.35rem;
+        border-top: solid 3px #de3f3f;
+        border-left: none;
+        padding-top: 1rem;
+        padding-left: 0rem;
+        padding-right: 0rem; }
   .contenedor-nosotros .menu {
     display: flex;
     justify-content: space-around;
@@ -711,6 +785,10 @@
       gap: 2rem;
       list-style: none;
       color: #f2f1f1; }
+      .contenedor-nosotros .menu ul li a:hover {
+        padding: 0rem;
+        background-color: #E68484;
+        border-radius: 0.5rem; }
       .contenedor-nosotros .menu ul li button {
         background-color: #de3f3f;
         border: none;
@@ -730,6 +808,23 @@
       display: none; }
     .contenedor-nosotros .menu .desplegado {
       display: none; }
+  .contenedor-nosotros .principal .centrado {
+    gap: 1rem;
+    padding: 1.5rem;
+    text-align: center; }
+    .contenedor-nosotros .principal .centrado h1 {
+      font-size: 1.7rem;
+      align-self: center;
+      font-weight: bold; }
+    .contenedor-nosotros .principal .centrado p {
+      font-size: 1.35rem;
+      border-top: solid 3px #de3f3f;
+      border-left: none;
+      padding-top: 1rem;
+      padding-left: 0rem;
+      padding-right: 0rem; }
+  .contenedor-nosotros .formulario {
+    padding: 5%; }
   .contenedor-cotiza .menu {
     display: flex;
     justify-content: space-around;
@@ -745,6 +840,10 @@
       gap: 2rem;
       list-style: none;
       color: #f2f1f1; }
+      .contenedor-cotiza .menu ul li a:hover {
+        padding: 0rem;
+        background-color: #E68484;
+        border-radius: 0.5rem; }
       .contenedor-cotiza .menu ul li button {
         background-color: #de3f3f;
         border: none;
@@ -763,13 +862,40 @@
     .contenedor-cotiza .menu .logo-desplegado {
       display: none; }
     .contenedor-cotiza .menu .desplegado {
-      display: none; } }
+      display: none; }
+  .contenedor-cotiza .principal .centrado {
+    gap: 1rem;
+    padding: 1.5rem;
+    text-align: center; }
+    .contenedor-cotiza .principal .centrado h1 {
+      font-size: 1.7rem;
+      align-self: center;
+      font-weight: bold; }
+    .contenedor-cotiza .principal .centrado p {
+      font-size: 1.35rem;
+      border-top: solid 3px #de3f3f;
+      border-left: none;
+      padding-top: 1rem;
+      padding-left: 0rem;
+      padding-right: 0rem; }
+    .contenedor-cotiza .principal .centrado .botones {
+      align-self: center;
+      justify-content: center;
+      align-items: center; }
+      .contenedor-cotiza .principal .centrado .botones .boton1 a {
+        font-size: 0.9rem; }
+      .contenedor-cotiza .principal .centrado .botones .boton2 a {
+        font-size: 0.9rem; }
+      .contenedor-cotiza .principal .centrado .botones .boton3 a {
+        font-size: 0.9rem; }
+  .contenedor-cotiza .banner img {
+    width: 50%; } }
 
 @media screen and (max-width: 480px) {
   .contenedor {
     grid-template-rows: 10vh 1.5fr 3.5fr 15vh;
     grid-template-areas: "menu menu" "principal principal" "proceso proceso" "footer footer";
-    height: 190vh; }
+    height: 220vh; }
     .contenedor .principal .centrado h1 {
       font-size: 1rem; }
     .contenedor .principal .centrado p {
@@ -813,8 +939,10 @@
         .contenedor .proceso .opciones div {
           padding: 5%;
           width: 80%; }
+      .contenedor .proceso button {
+        margin-top: 5rem; }
   .contenedor-materiales {
-    grid-template-rows: 10vh 1fr 7fr 15vh; }
+    grid-template-rows: 10vh 1fr 9fr 15vh; }
     .contenedor-materiales .grilla-materiales {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
