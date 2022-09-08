@@ -13,7 +13,7 @@
     background-color: black;
     display: grid;
     grid-template-columns:1fr 1fr;
-    grid-template-rows: 10vh 1fr 1fr 10vh;
+    grid-template-rows: 12vh auto 50vh 15vh;
     grid-template-areas: 
     "menu menu"
     "principal foto"
@@ -29,8 +29,8 @@
         background-color: $color-principal;
         grid-area: principal;
         @extend %flex-row;
-        align-items: flex-start;
-        padding-top: 10%;
+        align-items: center;
+        padding-bottom: 10%;
         color: $color-secundario;
         .centrado{
             @extend %flex-col;
@@ -100,7 +100,7 @@
     background-color: $color-principal;
     display: grid;
     grid-template-columns:1fr 1fr;
-    grid-template-rows: 10vh 0.4fr 1.6fr 10vh;
+    grid-template-rows: 12vh 0.4fr 1.6fr 15vh;
     grid-template-areas: 
     "menu menu"
     "principal principal"
@@ -120,6 +120,8 @@
         .centrado{
             @extend %flex-col;
             @include titulares;
+            margin: 1rem 5%;
+            max-width: 80rem;
             .botones{
                 display: flex;
                 width: 100%;
@@ -134,7 +136,8 @@
         @extend %flex-col;
         background-color: $color-secundario;
         grid-area: proceso;
-        margin: 10%;
+        margin: 2rem 10%;
+        max-width: 80rem;
         .opciones{
             @extend %flex-row;
             div{
@@ -164,7 +167,7 @@
     background-color: $color-principal;
     display: grid;
     grid-template-columns:1fr 1fr;
-    grid-template-rows: 10vh 1fr 4fr 10vh;
+    grid-template-rows: 12vh 1fr 4fr 15vh;
     grid-template-areas: 
     "menu menu"
     "principal principal"
@@ -184,6 +187,8 @@
         .centrado{
             @extend %flex-col;
             @include titulares;
+            margin: 1rem 5%;
+            max-width: 80rem;
             .botones{
                 display: flex;
                 width: 100%;
@@ -208,27 +213,140 @@
         justify-self: center;
         gap: 2rem;
         padding: 5rem 0rem;
-        img{
-            border-radius: 125px;
-        }
-        img-uno{
+        .img-uno{
+            display: flex;
+            align-items: center;
+            justify-content: center;
             grid-area: img-uno;
+            @include tarjetas;
+            background-image: url(../img/pla.jpg);
+            p{
+                @include titulo-material;
+                display: none;
+                
+            }
         }
-        img-dos{
+        .img-uno:hover{
+            background-image: url(../img/pla-filtro.jpg);
+            p{
+                text-align: center;
+                display: contents; 
+            }
+            
+                
+        }
+        .img-dos{
+            display: flex;
+            align-items: center;
+            justify-content: center;
             grid-area: img-dos;
+            @include tarjetas;
+            background-image: url(../img/abs.jpg);
+            p{
+                @include titulo-material;
+                display: none;
+                
+            }
         }
-        img-tres{
+        .img-dos:hover{
+            background-image: url(../img/abs-filtro.jpg);
+            p{
+                text-align: center;
+                display: contents; 
+            }
+            
+                
+        }
+        .img-tres{
+            display: flex;
+            align-items: center;
+            justify-content: center;
             grid-area: img-tres;
+            @include tarjetas;
+            background-image: url(../img/nylon.jpg);
+            p{
+                @include titulo-material;
+                display: none;
+                
+            }
         }
-        img-cuatro{
+        .img-tres:hover{
+            background-image: url(../img/nylon-filtro.jpg);
+            p{
+                text-align: center;
+                display: contents; 
+            }
+            
+                
+        }
+        .img-cuatro{
+            display: flex;
+            align-items: center;
+            justify-content: center;
             grid-area: img-cuatro;
+            @include tarjetas;
+            background-image: url(../img/tpu.jpg);
+            p{
+                @include titulo-material;
+                display: none;
+                
+            }
         }
-        img-cinco{
+        .img-cuatro:hover{
+            background-image: url(../img/tpu-filtro.jpg);
+            p{
+                text-align: center;
+                display: contents; 
+            }
+            
+                
+        }
+        .img-cinco{
+            display: flex;
+            align-items: center;
+            justify-content: center;
             grid-area: img-cinco;
+            @include tarjetas;
+            background-image: url(../img/petg.jpg);
+            p{
+                @include titulo-material;
+                display: none;
+                
+            }
         }
-        img-seis{
+        .img-cinco:hover{
+            background-image: url(../img/petg-filtro.jpg);
+            p{
+                text-align: center;
+                display: contents; 
+            }
+            
+                
+        }
+        .img-seis{
+            display: flex;
+            align-items: center;
+            justify-content: center;
             grid-area: img-seis;
+            @include tarjetas;
+            background-image: url(../img/recina.jpg);
+            p{
+                @include titulo-material;
+                display: none;
+                
+            }
         }
+        .img-seis:hover{
+            background-image: url(../img/recina-filtro.jpg);
+            p{
+                text-align: center;
+                display: contents; 
+            }
+            
+                
+        }
+        
+        
     }
     @include pie;
 }
@@ -236,25 +354,26 @@
     background-color: $color-secundario;
     display: grid;
     grid-template-columns:1fr 1fr;
-    grid-template-rows: 10vh 1.2fr 1.8fr 10vh;
+    grid-template-rows: 12vh auto auto 15vh;
     grid-template-areas: 
     "menu menu"
     "principal foto"
     "formulario formulario"
     "footer footer";
+    width: 100%;
     .menu{
         @include barra-menu;
         .navbar{
             display: none;
         }
     }
-    height: 100vh;
     .principal{
         background-color: $color-secundario;
         grid-area: principal;
-        @extend %flex-row;
+        @extend %flex-col;
         align-items: flex-start;
         padding-top: 10%;
+        width: auto;
         color:black;
         .centrado{
             @extend %flex-col;
@@ -268,21 +387,31 @@
             }
 
         }
+        .caras{
+            display: flex;
+            padding-top: 1rem;
+            padding-bottom: 3rem;
+            gap: 1rem;
+            align-self: center;
+            img{
+                border-radius: 75px;
+                width: 130px;
+            }
+        }
     }
     .foto{
         background-color: bisque;
         grid-area: foto;
         img{
             height: 100%;
-            width: 100%;
-            
+            width: 100%
         }
     }
     .formulario{
         grid-area: formulario;
         background-color: $color-principal;
         @extend %flex-col;
-        padding: 20%;
+        padding: 5% 15%;
         h2{
             color: $color-secundario;
             text-align: center;
@@ -303,7 +432,7 @@
     background-color: $color-gris;
     display: grid;
     grid-template-columns:1.3fr 0.7fr;
-    grid-template-rows: 10vh 1fr 10vh;
+    grid-template-rows: 12vh 1fr 15vh;
     grid-template-areas: 
     "menu menu"
     "principal banner"
@@ -336,6 +465,8 @@
                     border: $color-secundario 3px solid;
                     background-color: $color-gris;
                     margin-bottom: 2rem;
+                    padding-left: 0.5rem;
+                    padding-right: 0.5rem;
                     a{
                         text-decoration: none;
                         color: black;
@@ -392,26 +523,21 @@
 @media screen and (max-width:1024px){
     .contenedor{
         grid-template-columns:1fr 1fr;
-        grid-template-rows: 10vh 2fr 2fr 15vh;
+        grid-template-rows: 12vh 1fr 1fr 1fr 15vh;
         grid-template-areas: 
         "menu menu"
         "principal principal"
+        "foto foto"
         "proceso proceso"
         "footer footer";
-        height: 150vh;
-        .foto{
-            img{
-                display: none;
-            }
-        }
+        height: 320vh;
     }
     .contenedor-servicios{
-        grid-template-rows: 10vh 1fr 4fr 15vh;
+        grid-template-rows: 12vh 1fr 4fr 15vh;
         .proceso{
             background-color: $color-principal;
             margin: 0;
             .opciones{
-                
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -437,21 +563,18 @@
         }
     }
     .contenedor-nosotros{
-        grid-template-columns:1fr;
-        grid-template-rows: 10vh 1fr 1fr 1fr 15vh;
+        grid-template-columns:1fr 1fr;
+        grid-template-rows: 12vh auto auto auto 15vh;
         grid-template-areas: 
-        "menu"
-        "principal"
-        "foto"
-        "formulario"
-        "footer";
-        .foto{
-            width: 100%;
-        }
+        "menu menu"
+        "principal principal"
+        "foto foto"
+        "formulario formulario"
+        "footer footer";
     }
     .contenedor-cotiza{
         grid-template-columns:auto;
-        grid-template-rows: 10vh 1fr 1fr 10vh;
+        grid-template-rows: 12vh 1fr 1fr 15vh;
         grid-template-areas: 
         "menu"
         "principal"
@@ -460,7 +583,7 @@
         height: 210vh;
         .banner{
             img{
-                transform: scale(1.4);
+                transform: scale(1.1);
                 padding-bottom: 2rem;
             } 
         }
@@ -468,14 +591,16 @@
 }
 @media screen and (max-width:768px){
     .contenedor{
-        grid-template-columns:1fr 1fr;
-        grid-template-rows: 10vh 1.5fr 3.5fr 15vh;
+        background-color: $color-secundario;
+        grid-template-columns:1fr;
+        grid-template-rows: 12vh auto auto auto 15vh;
         grid-template-areas: 
         "menu menu"
         "principal principal"
+        "foto foto"
         "proceso proceso"
         "footer footer";
-        height: 230vh;
+        height: 1500px;
         .menu{
             @include barra-menu;
             .navbar{
@@ -503,24 +628,27 @@
                 }
             }
         }
-        .foto{
-            img{
-                display: none;
-            }
-        }
         .proceso{
             padding-top: 3rem;
+            height: 1200px;
             .opciones{
                 flex-direction: column;
                 align-items: center;
                 transform: scale(1.3);
-                height: 120vh;
                 gap: 1rem;
                 div{
                     padding: 5%;
                     width: 80%;
                 }
             }
+            button{
+                margin-bottom: 5rem;
+                margin-top: 5rem;
+            }
+        }
+        .foto{
+            width: auto;
+            height: fit-content;
         }
     }
     .contenedor-servicios{
@@ -567,8 +695,10 @@
                 display: none;
             }
         }
-        grid-template-rows: 10vh 1fr 14fr 15vh;
+        grid-template-rows: 12vh 1fr 9fr 15vh;
+        height: 3400px;
         .grilla-materiales{
+            gap: 15rem;
             grid-template-columns:1fr;
             grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
             grid-template-areas: 
@@ -669,13 +799,13 @@
 }
 @media screen and (max-width:480px){
     .contenedor{
-        grid-template-rows: 10vh 1.5fr 3.5fr 15vh;
+        grid-template-rows: 12vh auto auto auto 15vh;
         grid-template-areas: 
         "menu menu"
         "principal principal"
+        "foto foto"
         "proceso proceso"
         "footer footer";
-        height: 220vh;
         .principal{
             .centrado{
                 h1{
@@ -701,18 +831,13 @@
                 }
             }
         }
-        .foto{
-            img{
-                display: none;
-            }
-        }
         .proceso{
+            height: 1000px;
             padding-top: 3rem;
             .opciones{
                 flex-direction: column;
                 align-items: center;
                 transform: scale(1);
-                height: 90vh;
                 gap: 1rem;
                 div{
                     padding: 5%;
@@ -724,8 +849,11 @@
             }
         }
     }
+    .contenedor-servicios{
+        grid-template-rows: 12vh 1fr 3.3fr 15vh;
+    }
     .contenedor-materiales{
-        grid-template-rows: 10vh 1fr 9fr 15vh;
+        grid-template-rows: 12vh 1fr 9fr 15vh;
         .grilla-materiales{
             grid-template-columns:1fr;
             grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -736,8 +864,21 @@
             "img-cuatro"
             "img-cinco"
             "img-seis";
+            height: auto;
+            gap: 0rem;
+            padding: 0;
             img{
                 transform: scale(1.25);
+            }
+        }
+    }
+    .contenedor-nosotros{
+        .principal{
+            .caras{
+                gap: 0px;
+                img{
+                    transform: scale(0.7);
+                }
             }
         }
     }
