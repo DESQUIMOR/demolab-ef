@@ -23,12 +23,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 12vh auto 50vh 15vh;
-  grid-template-areas: "menu menu"
- "principal foto"
- "proceso proceso"
- "footer footer";
-  }
+  grid-template-areas: "menu menu" "principal foto" "proceso proceso" "footer footer";
   /*---------------menu------------------*/
+  /*---------------contenido principal------------------*/
+  /*---------------imagen lateral------------------*/
+  /*---------------proceso de impresion------------------*/
+  /*---------------footer------------------*/ }
   .contenedor .menu {
     display: flex;
     justify-content: space-around;
@@ -63,7 +63,6 @@
         background-color: #E68484; }
     .contenedor .menu .navbar {
       display: none; }
-  /*---------------contenido principal------------------*/
   .contenedor .principal {
     background-color: #21283f;
     grid-area: principal;
@@ -118,14 +117,12 @@
         .contenedor .principal .centrado .botones .boton-dos:hover {
           background-color: #E68484;
           transform: scale(1.1); }
-  /*---------------imagen lateral------------------*/
   .contenedor .foto {
     background-color: bisque;
     grid-area: foto; }
     .contenedor .foto img {
       height: 100%;
       width: 100%; }
-  /*---------------proceso de impresion------------------*/
   .contenedor .proceso {
     background-color: #f2f1f1;
     grid-area: proceso; }
@@ -157,7 +154,6 @@
     .contenedor .proceso button:hover {
       background-color: #E68484;
       transform: scale(1.1); }
-  /*---------------footer------------------*/ 
   .contenedor footer {
     gap: 0.3rem;
     background-color: #21283f;
@@ -173,11 +169,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 12vh 0.4fr 1.6fr 15vh;
-  grid-template-areas: "menu menu"
- "principal principal"
- "proceso proceso"
- "footer footer";}
+  grid-template-areas: "menu menu" "principal principal" "proceso proceso" "footer footer";
   /*---------------menu------------------*/
+  /*---------------titulo y descripción------------------*/
+  /*---------------tarjetas con servicios------------------*/
+  /*---------------footer------------------*/ }
   .contenedor-servicios .menu {
     display: flex;
     justify-content: space-around;
@@ -212,7 +208,6 @@
         background-color: #E68484; }
     .contenedor-servicios .menu .navbar {
       display: none; }
-  /*---------------titulo y descripción------------------*/
   .contenedor-servicios .principal {
     background-color: #21283f;
     grid-area: principal;
@@ -238,7 +233,6 @@
         justify-content: space-between;
         margin-top: 1rem;
         gap: 4%; }
-  /*---------------tarjetas con servicios------------------*/
   .contenedor-servicios .proceso {
     background-color: #f2f1f1;
     grid-area: proceso;
@@ -264,7 +258,6 @@
       .contenedor-servicios .proceso button a {
         text-decoration: none;
         color: #f2f1f1; }
-  /*---------------footer------------------*/ 
   .contenedor-servicios footer {
     gap: 0.3rem;
     background-color: #21283f;
@@ -280,11 +273,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 12vh 1fr 4fr 15vh;
-  grid-template-areas: "menu menu"
- "principal principal"
- "grilla-materiales grilla-materiales"
- "footer footer"; }
+  grid-template-areas: "menu menu" "principal principal" "grilla-materiales grilla-materiales" "footer footer";
   /*---------------menu------------------*/
+  /*---------------titulo y descripción------------------*/
+  /*---------------cuadricula de tarjetas------------------*/ }
   .contenedor-materiales .menu {
     display: flex;
     justify-content: space-around;
@@ -319,7 +311,6 @@
         background-color: #E68484; }
     .contenedor-materiales .menu .navbar {
       display: none; }
-  /*---------------titulo y descripción------------------*/
   .contenedor-materiales .principal {
     background-color: #21283f;
     grid-area: principal;
@@ -339,15 +330,13 @@
         border-left: solid 3px #de3f3f;
         padding-left: 1rem;
         padding-right: 1rem; }
-  /*---------------cuadricula de tarjetas------------------*/
   .contenedor-materiales .grilla-materiales {
     grid-area: grilla-materiales;
     background-color: #21283f;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: "img-uno img-dos img-tres"
-    "img-cuatro img-cinco img-seis";
+    grid-template-areas: "img-uno img-dos img-tres" "img-cuatro img-cinco img-seis";
     align-items: center;
     justify-items: center;
     justify-self: center;
@@ -491,7 +480,6 @@
       .contenedor-materiales .grilla-materiales .img-seis:hover p {
         text-align: center;
         display: contents; }
-  /*---------------footer------------------*/
   .contenedor-materiales footer {
     gap: 0.3rem;
     background-color: #21283f;
@@ -507,12 +495,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 12vh auto auto 15vh;
-  grid-template-areas: "menu menu"
- "principal foto"
- "formulario formulario"
- "footer footer";
-  width: 100%; }
+  grid-template-areas: "menu menu" "principal foto" "formulario formulario" "footer footer";
+  width: 100%;
   /*---------------menu------------------*/
+  /*---------------Titulo y descripción------------------*/
+  /*---------------imagen lateral------------------*/
+  /*---------------contenedor formulario------------------*/ }
   .contenedor-nosotros .menu {
     display: flex;
     justify-content: space-around;
@@ -547,14 +535,14 @@
         background-color: #E68484; }
     .contenedor-nosotros .menu .navbar {
       display: none; }
-  /*---------------Titulo y descripción------------------*/
   .contenedor-nosotros .principal {
     background-color: #f2f1f1;
     grid-area: principal;
     align-items: flex-start;
     padding-top: 10%;
     width: auto;
-    color: black;}
+    color: black;
+    /*---------------fotos caras------------------*/ }
     .contenedor-nosotros .principal .centrado {
       gap: 1rem;
       padding: 1rem 4rem;
@@ -574,7 +562,6 @@
         justify-content: space-between;
         margin-top: 1rem;
         gap: 4%; }
-    /*---------------fotos caras------------------*/ 
     .contenedor-nosotros .principal .caras {
       display: flex;
       padding-top: 1rem;
@@ -584,21 +571,17 @@
       .contenedor-nosotros .principal .caras img {
         border-radius: 75px;
         width: 130px; }
-  /*---------------imagen lateral------------------*/
   .contenedor-nosotros .foto {
     background-color: bisque;
     grid-area: foto; }
     .contenedor-nosotros .foto img {
       height: 100%;
       width: 100%; }
-  /*---------------contenedor formulario------------------*/
   .contenedor-nosotros .container-fluid {
     grid-area: formulario;
     margin: 0;
-    padding-left: 0;
-    padding: 0; }
+    background-color: #21283f; }
     .contenedor-nosotros .container-fluid .formulario {
-      background-color: #21283f;
       padding: 5% 15%; }
       .contenedor-nosotros .container-fluid .formulario h2 {
         color: #f2f1f1;
@@ -619,7 +602,6 @@
       .contenedor-nosotros .container-fluid .formulario button:hover {
         background-color: #E68484;
         transform: scale(1.1); }
-  /*---------------footer------------------*/ 
   .contenedor-nosotros footer {
     gap: 0.3rem;
     background-color: #21283f;
@@ -635,11 +617,12 @@
   display: grid;
   grid-template-columns: 1.3fr 0.7fr;
   grid-template-rows: 12vh 1fr 15vh;
-  grid-template-areas: "menu menu"
- "principal banner"
- "footer footer";
-  height: 100vh; }
+  grid-template-areas: "menu menu" "principal banner" "footer footer";
   /*---------------menu------------------*/
+  height: 100vh;
+  /*---------------titulo y descripción------------------*/
+  /*---------------banner------------------*/
+  /*---------------footer------------------*/ }
   .contenedor-cotiza .menu {
     display: flex;
     justify-content: space-around;
@@ -674,7 +657,6 @@
         background-color: #E68484; }
     .contenedor-cotiza .menu .navbar {
       display: none; }
-  /*---------------titulo y descripción------------------*/
   .contenedor-cotiza .principal {
     background-color: #f2f1f1;
     grid-area: principal;
@@ -729,7 +711,6 @@
             text-decoration: none;
             color: black;
             font-size: 1rem; }
-  /*---------------banner------------------*/
   .contenedor-cotiza .banner {
     grid-area: banner;
     text-align: center;
@@ -753,7 +734,6 @@
     .contenedor-cotiza .banner .banner-boton:hover {
       background-color: #E68484;
       transform: scale(1.1); }
-/*---------------footer------------------*/
   .contenedor-cotiza footer {
     gap: 0.3rem;
     background-color: #21283f;
@@ -768,11 +748,7 @@
   .contenedor {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 12vh 1fr 1fr 1fr 15vh;
-    grid-template-areas: "menu menu"
- "principal principal"
- "foto foto"
- "proceso proceso"
- "footer footer";
+    grid-template-areas: "menu menu" "principal principal" "foto foto" "proceso proceso" "footer footer";
     height: 320vh; }
   .contenedor-servicios {
     grid-template-rows: 12vh 1fr 4fr 15vh; }
@@ -791,24 +767,15 @@
   .contenedor-materiales .grilla-materiales {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "img-uno img-dos"
- "img-tres img-cuatro"
- "img-cinco img-seis"; }
+    grid-template-areas: "img-uno img-dos" "img-tres img-cuatro" "img-cinco img-seis"; }
   .contenedor-nosotros {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 12vh auto auto auto 15vh;
-    grid-template-areas: "menu menu"
- "principal principal"
- "foto foto"
- "formulario formulario"
- "footer footer"; }
+    grid-template-areas: "menu menu" "principal principal" "foto foto" "formulario formulario" "footer footer"; }
   .contenedor-cotiza {
     grid-template-columns: auto;
     grid-template-rows: 12vh 1fr 1fr 15vh;
-    grid-template-areas: "menu"
- "principal"
- "banner"
- "footer";
+    grid-template-areas: "menu" "principal" "banner" "footer";
     height: 210vh; }
     .contenedor-cotiza .banner img {
       transform: scale(1.1);
@@ -820,11 +787,7 @@
     background-color: #f2f1f1;
     grid-template-columns: 1fr;
     grid-template-rows: 12vh auto auto auto 15vh;
-    grid-template-areas: "menu menu"
- "principal principal"
- "foto foto"
- "proceso proceso"
- "footer footer";
+    grid-template-areas: "menu menu" "principal principal" "foto foto" "proceso proceso" "footer footer";
     height: 1500px; }
     .contenedor .menu {
       display: flex;
@@ -1010,12 +973,7 @@
       gap: 15rem;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-areas: "img-uno"
- "img-dos"
- "img-tres"
- "img-cuatro"
- "img-cinco"
- "img-seis"; }
+      grid-template-areas: "img-uno" "img-dos" "img-tres" "img-cuatro" "img-cinco" "img-seis"; }
       .contenedor-materiales .grilla-materiales img {
         transform: scale(1.5); }
     .contenedor-materiales .principal .centrado {
@@ -1166,11 +1124,7 @@
 @media screen and (max-width: 480px) {
   .contenedor {
     grid-template-rows: 12vh auto auto auto 15vh;
-    grid-template-areas: "menu menu"
- "principal principal"
- "foto foto"
- "proceso proceso"
- "footer footer"; }
+    grid-template-areas: "menu menu" "principal principal" "foto foto" "proceso proceso" "footer footer"; }
     .contenedor .principal .centrado h1 {
       font-size: 1rem; }
     .contenedor .principal .centrado p {
@@ -1221,12 +1175,7 @@
     .contenedor-materiales .grilla-materiales {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-areas: "img-uno"
- "img-dos"
- "img-tres"
- "img-cuatro"
- "img-cinco"
- "img-seis";
+      grid-template-areas: "img-uno" "img-dos" "img-tres" "img-cuatro" "img-cinco" "img-seis";
       height: auto;
       gap: 0rem;
       padding: 0; }

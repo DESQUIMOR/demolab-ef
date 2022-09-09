@@ -437,10 +437,8 @@
     .container-fluid{
         grid-area: formulario;
         margin: 0;
-        padding-left: 0;
-        padding: 0;
+        background-color: $color-principal;
         .formulario{
-            background-color: $color-principal;
             @extend %flex-col;
             padding: 5% 15%;
             h2{
