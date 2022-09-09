@@ -1,14 +1,16 @@
+
 @import "utilities/variables";
 @import "utilities/extend";
 @import "utilities/mixin";
 @import "utilities/mapas";
-
+/*-----------------------------------reseteo-----------------------------------*/
 *{
     margin: map-get($map: $reseteo, $key: margin-reset);
     padding: map-get($map: $reseteo, $key: padding-reset);
     box-sizing: map-get($map: $reseteo, $key: box-sizing-reset);
     font-family: 'Poppins', sans-serif;
 }
+/*-----------------------------------Sección Inicio-----------------------------------*/
 .contenedor{
     background-color: black;
     display: grid;
@@ -19,12 +21,14 @@
     "principal foto"
     "proceso proceso"
     "footer footer";
+    /*---------------menu------------------*/
     .menu{
         @include barra-menu;
         .navbar{
             display: none;
         }
     }
+    /*---------------contenido principal------------------*/
     .principal{
         background-color: $color-principal;
         grid-area: principal;
@@ -44,16 +48,27 @@
                 .boton-uno{
                     @include boton-relleno;
                     width: 48%;
+                    transition: 0.3s;
                     
+                }
+                .boton-uno:hover{
+                    background-color: $color-hover;
+                    transform: scale(1.1)
                 }
                 .boton-dos{
                     @include boton-vacio;
                     width: 48%;
+                    transition: 0.3s;
+                }
+                .boton-dos:hover{
+                    background-color: $color-hover;
+                    transform: scale(1.1)
                 }
             }
 
         }
     }
+    /*---------------imagen lateral------------------*/
     .foto{
         background-color: bisque;
         grid-area: foto;
@@ -62,6 +77,7 @@
             width: 100%
         }
     }
+    /*---------------proceso de impresion------------------*/
     .proceso{
         @extend %flex-col;
         background-color: $color-secundario;
@@ -90,12 +106,18 @@
         }
         button{
             @include boton-relleno;
-            margin-top: 2rem
+            margin-top: 2rem;
+            transition: 0.3s;
+        }
+        button:hover{
+            background-color: $color-hover;
+            transform: scale(1.1)
         }
     }
+    /*---------------footer------------------*/
     @include pie;
 }
-
+/*-----------------------------------Sección Servicios-----------------------------------*/
 .contenedor-servicios{
     background-color: $color-principal;
     display: grid;
@@ -106,12 +128,14 @@
     "principal principal"
     "proceso proceso"
     "footer footer";
+    /*---------------menu------------------*/
     .menu{
         @include barra-menu;
         .navbar{
             display: none;
         }
     }
+    /*---------------titulo y descripción------------------*/
     .principal{
         background-color: $color-principal;
         grid-area: principal;
@@ -132,12 +156,12 @@
 
         }
     }
+    /*---------------tarjetas con servicios------------------*/
     .proceso{
         @extend %flex-col;
         background-color: $color-secundario;
         grid-area: proceso;
         margin: 2rem 10%;
-        max-width: 80rem;
         .opciones{
             @extend %flex-row;
             div{
@@ -161,8 +185,10 @@
             margin-top: 2rem
         }
     }
+    /*---------------footer------------------*/
     @include pie;
 }
+/*-----------------------------------Sección Materiales-----------------------------------*/
 .contenedor-materiales{
     background-color: $color-principal;
     display: grid;
@@ -173,12 +199,14 @@
     "principal principal"
     "grilla-materiales grilla-materiales"
     "footer footer";
+    /*---------------menu------------------*/
     .menu{
         @include barra-menu;
         .navbar{
             display: none;
         }
     }
+    /*---------------titulo y descripción------------------*/
     .principal{
         background-color: $color-principal;
         grid-area: principal;
@@ -189,16 +217,9 @@
             @include titulares;
             margin: 1rem 5%;
             max-width: 80rem;
-            .botones{
-                display: flex;
-                width: 100%;
-                justify-content: space-between;
-                margin-top: 1rem;
-                gap: 4%;
-            }
-
         }
     }
+    /*---------------cuadricula de tarjetas------------------*/
     .grilla-materiales{
         grid-area: grilla-materiales;
         background-color: $color-principal;
@@ -350,6 +371,7 @@
     }
     @include pie;
 }
+/*-----------------------------------Sección Nosotros-----------------------------------*/
 .contenedor-nosotros{
     background-color: $color-secundario;
     display: grid;
@@ -361,12 +383,14 @@
     "formulario formulario"
     "footer footer";
     width: 100%;
+    /*---------------menu------------------*/
     .menu{
         @include barra-menu;
         .navbar{
             display: none;
         }
     }
+    /*---------------Titulo y descripción------------------*/
     .principal{
         background-color: $color-secundario;
         grid-area: principal;
@@ -387,6 +411,7 @@
             }
 
         }
+        /*---------------fotos caras------------------*/
         .caras{
             display: flex;
             padding-top: 1rem;
@@ -399,6 +424,7 @@
             }
         }
     }
+    /*---------------imagen lateral------------------*/
     .foto{
         background-color: bisque;
         grid-area: foto;
@@ -407,27 +433,37 @@
             width: 100%
         }
     }
-    .formulario{
+    /*---------------contenedor formulario------------------*/
+    .container-fluid{
         grid-area: formulario;
-        background-color: $color-principal;
-        @extend %flex-col;
-        padding: 5% 15%;
-        h2{
-            color: $color-secundario;
-            text-align: center;
-            padding: 2rem;
-            
-        }
-        button {
-            @include boton-relleno;
-            width: 8rem;
-        }
-        button{
-            margin: 2rem;
+        margin: 0;
+        padding-left: 0;
+        padding: 0;
+        .formulario{
+            background-color: $color-principal;
+            @extend %flex-col;
+            padding: 5% 15%;
+            h2{
+                color: $color-secundario;
+                text-align: center;
+                padding: 2rem;
+                
+            }
+            button {
+                @include boton-relleno;
+                width: 8rem;
+                margin: 2rem;
+                transition: 0.3s;
+            }
+            button:hover{
+                background-color: $color-hover;
+                transform: scale(1.1)
+            }
         }
     }
     @include pie;
 }
+/*-----------------------------------Sección Cotiza-----------------------------------*/
 .contenedor-cotiza{
     background-color: $color-gris;
     display: grid;
@@ -437,6 +473,7 @@
     "menu menu"
     "principal banner"
     "footer footer";
+    /*---------------menu------------------*/
     .menu{
         @include barra-menu;
         .navbar{
@@ -444,6 +481,7 @@
         }
     }
     height: 100vh;
+    /*---------------titulo y descripción------------------*/
     .principal{
         background-color: $color-secundario;
         grid-area: principal;
@@ -499,6 +537,7 @@
         }
         
     }
+    /*---------------banner------------------*/
     .banner{
         grid-area: banner;
         @extend %flex-col;
@@ -514,12 +553,17 @@
         .banner-boton{
             @include boton-relleno;
             margin-top: 2.5rem;
+            transition: 0.3s;
+        }
+        .banner-boton:hover{
+            background-color: $color-hover;
+            transform: scale(1.1);
         }
     }
-
+    /*---------------footer------------------*/
     @include pie;
 }
-
+/*-----------------------------------Media querys dispositivos grandes (1024)-----------------------------------*/
 @media screen and (max-width:1024px){
     .contenedor{
         grid-template-columns:1fr 1fr;
@@ -589,6 +633,7 @@
         }
     }
 }
+/*-----------------------------------Media querys dispositivos medianos (768)-----------------------------------*/
 @media screen and (max-width:768px){
     .contenedor{
         background-color: $color-secundario;
@@ -635,6 +680,7 @@
                 flex-direction: column;
                 align-items: center;
                 transform: scale(1.3);
+                width: 70%;
                 gap: 1rem;
                 div{
                     padding: 5%;
@@ -797,6 +843,7 @@
         }
     }
 }
+/*-----------------------------------Media querys dispositivos pequeños (480)-----------------------------------*/
 @media screen and (max-width:480px){
     .contenedor{
         grid-template-rows: 12vh auto auto auto 15vh;

@@ -68,7 +68,7 @@
     grid-area: menu;
     a{
         text-decoration: none;
-        color: $color-secundario;font-size: 0.8rem;
+        color: $color-secundario;
     }
     ul{
         display: flex;
@@ -85,6 +85,10 @@
             }
             button{
                 @include boton-relleno;
+                transition: 0.3s;
+            }
+            button:hover{
+                background-color: $color-hover;
             }
         }
     }

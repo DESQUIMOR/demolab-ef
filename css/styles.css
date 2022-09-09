@@ -1,4 +1,5 @@
-.contenedor .principal .centrado, .contenedor .proceso, .contenedor .proceso .opciones div, .contenedor footer, .contenedor-servicios .principal .centrado, .contenedor-servicios .proceso, .contenedor-servicios .proceso .opciones div, .contenedor-servicios footer, .contenedor-materiales .principal .centrado, .contenedor-materiales footer, .contenedor-nosotros .principal, .contenedor-nosotros .principal .centrado, .contenedor-nosotros .formulario, .contenedor-nosotros footer, .contenedor-cotiza .principal .centrado, .contenedor-cotiza .banner, .contenedor-cotiza footer {
+@charset "UTF-8";
+.contenedor .principal .centrado, .contenedor .proceso, .contenedor .proceso .opciones div, .contenedor footer, .contenedor-servicios .principal .centrado, .contenedor-servicios .proceso, .contenedor-servicios .proceso .opciones div, .contenedor-servicios footer, .contenedor-materiales .principal .centrado, .contenedor-materiales footer, .contenedor-nosotros .principal, .contenedor-nosotros .principal .centrado, .contenedor-nosotros .container-fluid .formulario, .contenedor-nosotros footer, .contenedor-cotiza .principal .centrado, .contenedor-cotiza .banner, .contenedor-cotiza footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,18 +10,25 @@
   justify-content: center;
   text-align: center; }
 
+/*-----------------------------------reseteo-----------------------------------*/
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif; }
 
+/*-----------------------------------Sección Inicio-----------------------------------*/
 .contenedor {
   background-color: black;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 12vh auto 50vh 15vh;
-  grid-template-areas: "menu menu" "principal foto" "proceso proceso" "footer footer"; }
+  grid-template-areas: "menu menu"
+ "principal foto"
+ "proceso proceso"
+ "footer footer";
+  }
+  /*---------------menu------------------*/
   .contenedor .menu {
     display: flex;
     justify-content: space-around;
@@ -29,8 +37,7 @@
     grid-area: menu; }
     .contenedor .menu a {
       text-decoration: none;
-      color: #f2f1f1;
-      font-size: 0.8rem; }
+      color: #f2f1f1; }
     .contenedor .menu ul {
       display: flex;
       align-items: center;
@@ -47,12 +54,16 @@
         border: none;
         padding: 0.5rem 2rem;
         border-radius: 2rem;
-        font-weight: bold; }
+        font-weight: bold;
+        transition: 0.3s; }
         .contenedor .menu ul li button a {
           text-decoration: none;
           color: #f2f1f1; }
+      .contenedor .menu ul li button:hover {
+        background-color: #E68484; }
     .contenedor .menu .navbar {
       display: none; }
+  /*---------------contenido principal------------------*/
   .contenedor .principal {
     background-color: #21283f;
     grid-area: principal;
@@ -84,10 +95,14 @@
           padding: 0.5rem 2rem;
           border-radius: 2rem;
           font-weight: bold;
-          width: 48%; }
+          width: 48%;
+          transition: 0.3s; }
           .contenedor .principal .centrado .botones .boton-uno a {
             text-decoration: none;
             color: #f2f1f1; }
+        .contenedor .principal .centrado .botones .boton-uno:hover {
+          background-color: #E68484;
+          transform: scale(1.1); }
         .contenedor .principal .centrado .botones .boton-dos {
           background-color: #21283f;
           color: #f2f1f1;
@@ -95,16 +110,22 @@
           padding: 0.5rem 2rem;
           border-radius: 2rem;
           font-weight: bold;
-          width: 48%; }
+          width: 48%;
+          transition: 0.3s; }
           .contenedor .principal .centrado .botones .boton-dos a {
             text-decoration: none;
             color: #f2f1f1; }
+        .contenedor .principal .centrado .botones .boton-dos:hover {
+          background-color: #E68484;
+          transform: scale(1.1); }
+  /*---------------imagen lateral------------------*/
   .contenedor .foto {
     background-color: bisque;
     grid-area: foto; }
     .contenedor .foto img {
       height: 100%;
       width: 100%; }
+  /*---------------proceso de impresion------------------*/
   .contenedor .proceso {
     background-color: #f2f1f1;
     grid-area: proceso; }
@@ -128,10 +149,15 @@
       padding: 0.5rem 2rem;
       border-radius: 2rem;
       font-weight: bold;
-      margin-top: 2rem; }
+      margin-top: 2rem;
+      transition: 0.3s; }
       .contenedor .proceso button a {
         text-decoration: none;
         color: #f2f1f1; }
+    .contenedor .proceso button:hover {
+      background-color: #E68484;
+      transform: scale(1.1); }
+  /*---------------footer------------------*/ 
   .contenedor footer {
     gap: 0.3rem;
     background-color: #21283f;
@@ -141,12 +167,17 @@
       font-size: 0.8rem;
       font-weight: lighter; }
 
+/*-----------------------------------Sección Servicios-----------------------------------*/
 .contenedor-servicios {
   background-color: #21283f;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 12vh 0.4fr 1.6fr 15vh;
-  grid-template-areas: "menu menu" "principal principal" "proceso proceso" "footer footer"; }
+  grid-template-areas: "menu menu"
+ "principal principal"
+ "proceso proceso"
+ "footer footer";}
+  /*---------------menu------------------*/
   .contenedor-servicios .menu {
     display: flex;
     justify-content: space-around;
@@ -155,8 +186,7 @@
     grid-area: menu; }
     .contenedor-servicios .menu a {
       text-decoration: none;
-      color: #f2f1f1;
-      font-size: 0.8rem; }
+      color: #f2f1f1; }
     .contenedor-servicios .menu ul {
       display: flex;
       align-items: center;
@@ -173,12 +203,16 @@
         border: none;
         padding: 0.5rem 2rem;
         border-radius: 2rem;
-        font-weight: bold; }
+        font-weight: bold;
+        transition: 0.3s; }
         .contenedor-servicios .menu ul li button a {
           text-decoration: none;
           color: #f2f1f1; }
+      .contenedor-servicios .menu ul li button:hover {
+        background-color: #E68484; }
     .contenedor-servicios .menu .navbar {
       display: none; }
+  /*---------------titulo y descripción------------------*/
   .contenedor-servicios .principal {
     background-color: #21283f;
     grid-area: principal;
@@ -204,11 +238,11 @@
         justify-content: space-between;
         margin-top: 1rem;
         gap: 4%; }
+  /*---------------tarjetas con servicios------------------*/
   .contenedor-servicios .proceso {
     background-color: #f2f1f1;
     grid-area: proceso;
-    margin: 2rem 10%;
-    max-width: 80rem; }
+    margin: 2rem 10%; }
     .contenedor-servicios .proceso .opciones div {
       width: 33.33333%;
       gap: 0.5rem;
@@ -230,6 +264,7 @@
       .contenedor-servicios .proceso button a {
         text-decoration: none;
         color: #f2f1f1; }
+  /*---------------footer------------------*/ 
   .contenedor-servicios footer {
     gap: 0.3rem;
     background-color: #21283f;
@@ -239,12 +274,17 @@
       font-size: 0.8rem;
       font-weight: lighter; }
 
+/*-----------------------------------Sección Materiales-----------------------------------*/
 .contenedor-materiales {
   background-color: #21283f;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 12vh 1fr 4fr 15vh;
-  grid-template-areas: "menu menu" "principal principal" "grilla-materiales grilla-materiales" "footer footer"; }
+  grid-template-areas: "menu menu"
+ "principal principal"
+ "grilla-materiales grilla-materiales"
+ "footer footer"; }
+  /*---------------menu------------------*/
   .contenedor-materiales .menu {
     display: flex;
     justify-content: space-around;
@@ -253,8 +293,7 @@
     grid-area: menu; }
     .contenedor-materiales .menu a {
       text-decoration: none;
-      color: #f2f1f1;
-      font-size: 0.8rem; }
+      color: #f2f1f1; }
     .contenedor-materiales .menu ul {
       display: flex;
       align-items: center;
@@ -271,12 +310,16 @@
         border: none;
         padding: 0.5rem 2rem;
         border-radius: 2rem;
-        font-weight: bold; }
+        font-weight: bold;
+        transition: 0.3s; }
         .contenedor-materiales .menu ul li button a {
           text-decoration: none;
           color: #f2f1f1; }
+      .contenedor-materiales .menu ul li button:hover {
+        background-color: #E68484; }
     .contenedor-materiales .menu .navbar {
       display: none; }
+  /*---------------titulo y descripción------------------*/
   .contenedor-materiales .principal {
     background-color: #21283f;
     grid-area: principal;
@@ -296,19 +339,15 @@
         border-left: solid 3px #de3f3f;
         padding-left: 1rem;
         padding-right: 1rem; }
-      .contenedor-materiales .principal .centrado .botones {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        margin-top: 1rem;
-        gap: 4%; }
+  /*---------------cuadricula de tarjetas------------------*/
   .contenedor-materiales .grilla-materiales {
     grid-area: grilla-materiales;
     background-color: #21283f;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: "img-uno img-dos img-tres" "img-cuatro img-cinco img-seis";
+    grid-template-areas: "img-uno img-dos img-tres"
+    "img-cuatro img-cinco img-seis";
     align-items: center;
     justify-items: center;
     justify-self: center;
@@ -452,6 +491,7 @@
       .contenedor-materiales .grilla-materiales .img-seis:hover p {
         text-align: center;
         display: contents; }
+  /*---------------footer------------------*/
   .contenedor-materiales footer {
     gap: 0.3rem;
     background-color: #21283f;
@@ -461,13 +501,18 @@
       font-size: 0.8rem;
       font-weight: lighter; }
 
+/*-----------------------------------Sección Nosotros-----------------------------------*/
 .contenedor-nosotros {
   background-color: #f2f1f1;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 12vh auto auto 15vh;
-  grid-template-areas: "menu menu" "principal foto" "formulario formulario" "footer footer";
+  grid-template-areas: "menu menu"
+ "principal foto"
+ "formulario formulario"
+ "footer footer";
   width: 100%; }
+  /*---------------menu------------------*/
   .contenedor-nosotros .menu {
     display: flex;
     justify-content: space-around;
@@ -476,8 +521,7 @@
     grid-area: menu; }
     .contenedor-nosotros .menu a {
       text-decoration: none;
-      color: #f2f1f1;
-      font-size: 0.8rem; }
+      color: #f2f1f1; }
     .contenedor-nosotros .menu ul {
       display: flex;
       align-items: center;
@@ -494,19 +538,23 @@
         border: none;
         padding: 0.5rem 2rem;
         border-radius: 2rem;
-        font-weight: bold; }
+        font-weight: bold;
+        transition: 0.3s; }
         .contenedor-nosotros .menu ul li button a {
           text-decoration: none;
           color: #f2f1f1; }
+      .contenedor-nosotros .menu ul li button:hover {
+        background-color: #E68484; }
     .contenedor-nosotros .menu .navbar {
       display: none; }
+  /*---------------Titulo y descripción------------------*/
   .contenedor-nosotros .principal {
     background-color: #f2f1f1;
     grid-area: principal;
     align-items: flex-start;
     padding-top: 10%;
     width: auto;
-    color: black; }
+    color: black;}
     .contenedor-nosotros .principal .centrado {
       gap: 1rem;
       padding: 1rem 4rem;
@@ -526,6 +574,7 @@
         justify-content: space-between;
         margin-top: 1rem;
         gap: 4%; }
+    /*---------------fotos caras------------------*/ 
     .contenedor-nosotros .principal .caras {
       display: flex;
       padding-top: 1rem;
@@ -535,32 +584,42 @@
       .contenedor-nosotros .principal .caras img {
         border-radius: 75px;
         width: 130px; }
+  /*---------------imagen lateral------------------*/
   .contenedor-nosotros .foto {
     background-color: bisque;
     grid-area: foto; }
     .contenedor-nosotros .foto img {
       height: 100%;
       width: 100%; }
-  .contenedor-nosotros .formulario {
+  /*---------------contenedor formulario------------------*/
+  .contenedor-nosotros .container-fluid {
     grid-area: formulario;
-    background-color: #21283f;
-    padding: 5% 15%; }
-    .contenedor-nosotros .formulario h2 {
-      color: #f2f1f1;
-      text-align: center;
-      padding: 2rem; }
-    .contenedor-nosotros .formulario button {
-      background-color: #de3f3f;
-      border: none;
-      padding: 0.5rem 2rem;
-      border-radius: 2rem;
-      font-weight: bold;
-      width: 8rem; }
-      .contenedor-nosotros .formulario button a {
-        text-decoration: none;
-        color: #f2f1f1; }
-    .contenedor-nosotros .formulario button {
-      margin: 2rem; }
+    margin: 0;
+    padding-left: 0;
+    padding: 0; }
+    .contenedor-nosotros .container-fluid .formulario {
+      background-color: #21283f;
+      padding: 5% 15%; }
+      .contenedor-nosotros .container-fluid .formulario h2 {
+        color: #f2f1f1;
+        text-align: center;
+        padding: 2rem; }
+      .contenedor-nosotros .container-fluid .formulario button {
+        background-color: #de3f3f;
+        border: none;
+        padding: 0.5rem 2rem;
+        border-radius: 2rem;
+        font-weight: bold;
+        width: 8rem;
+        margin: 2rem;
+        transition: 0.3s; }
+        .contenedor-nosotros .container-fluid .formulario button a {
+          text-decoration: none;
+          color: #f2f1f1; }
+      .contenedor-nosotros .container-fluid .formulario button:hover {
+        background-color: #E68484;
+        transform: scale(1.1); }
+  /*---------------footer------------------*/ 
   .contenedor-nosotros footer {
     gap: 0.3rem;
     background-color: #21283f;
@@ -570,13 +629,17 @@
       font-size: 0.8rem;
       font-weight: lighter; }
 
+/*-----------------------------------Sección Cotiza-----------------------------------*/
 .contenedor-cotiza {
   background-color: #D9D9D9;
   display: grid;
   grid-template-columns: 1.3fr 0.7fr;
   grid-template-rows: 12vh 1fr 15vh;
-  grid-template-areas: "menu menu" "principal banner" "footer footer";
+  grid-template-areas: "menu menu"
+ "principal banner"
+ "footer footer";
   height: 100vh; }
+  /*---------------menu------------------*/
   .contenedor-cotiza .menu {
     display: flex;
     justify-content: space-around;
@@ -585,8 +648,7 @@
     grid-area: menu; }
     .contenedor-cotiza .menu a {
       text-decoration: none;
-      color: #f2f1f1;
-      font-size: 0.8rem; }
+      color: #f2f1f1; }
     .contenedor-cotiza .menu ul {
       display: flex;
       align-items: center;
@@ -603,12 +665,16 @@
         border: none;
         padding: 0.5rem 2rem;
         border-radius: 2rem;
-        font-weight: bold; }
+        font-weight: bold;
+        transition: 0.3s; }
         .contenedor-cotiza .menu ul li button a {
           text-decoration: none;
           color: #f2f1f1; }
+      .contenedor-cotiza .menu ul li button:hover {
+        background-color: #E68484; }
     .contenedor-cotiza .menu .navbar {
       display: none; }
+  /*---------------titulo y descripción------------------*/
   .contenedor-cotiza .principal {
     background-color: #f2f1f1;
     grid-area: principal;
@@ -663,6 +729,7 @@
             text-decoration: none;
             color: black;
             font-size: 1rem; }
+  /*---------------banner------------------*/
   .contenedor-cotiza .banner {
     grid-area: banner;
     text-align: center;
@@ -678,10 +745,15 @@
       padding: 0.5rem 2rem;
       border-radius: 2rem;
       font-weight: bold;
-      margin-top: 2.5rem; }
+      margin-top: 2.5rem;
+      transition: 0.3s; }
       .contenedor-cotiza .banner .banner-boton a {
         text-decoration: none;
         color: #f2f1f1; }
+    .contenedor-cotiza .banner .banner-boton:hover {
+      background-color: #E68484;
+      transform: scale(1.1); }
+/*---------------footer------------------*/
   .contenedor-cotiza footer {
     gap: 0.3rem;
     background-color: #21283f;
@@ -691,11 +763,16 @@
       font-size: 0.8rem;
       font-weight: lighter; }
 
+/*-----------------------------------Media querys dispositivos grandes (1024)-----------------------------------*/
 @media screen and (max-width: 1024px) {
   .contenedor {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 12vh 1fr 1fr 1fr 15vh;
-    grid-template-areas: "menu menu" "principal principal" "foto foto" "proceso proceso" "footer footer";
+    grid-template-areas: "menu menu"
+ "principal principal"
+ "foto foto"
+ "proceso proceso"
+ "footer footer";
     height: 320vh; }
   .contenedor-servicios {
     grid-template-rows: 12vh 1fr 4fr 15vh; }
@@ -714,26 +791,40 @@
   .contenedor-materiales .grilla-materiales {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "img-uno img-dos" "img-tres img-cuatro" "img-cinco img-seis"; }
+    grid-template-areas: "img-uno img-dos"
+ "img-tres img-cuatro"
+ "img-cinco img-seis"; }
   .contenedor-nosotros {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 12vh auto auto auto 15vh;
-    grid-template-areas: "menu menu" "principal principal" "foto foto" "formulario formulario" "footer footer"; }
+    grid-template-areas: "menu menu"
+ "principal principal"
+ "foto foto"
+ "formulario formulario"
+ "footer footer"; }
   .contenedor-cotiza {
     grid-template-columns: auto;
     grid-template-rows: 12vh 1fr 1fr 15vh;
-    grid-template-areas: "menu" "principal" "banner" "footer";
+    grid-template-areas: "menu"
+ "principal"
+ "banner"
+ "footer";
     height: 210vh; }
     .contenedor-cotiza .banner img {
       transform: scale(1.1);
       padding-bottom: 2rem; } }
 
+/*-----------------------------------Media querys dispositivos medianos (768)-----------------------------------*/
 @media screen and (max-width: 768px) {
   .contenedor {
     background-color: #f2f1f1;
     grid-template-columns: 1fr;
     grid-template-rows: 12vh auto auto auto 15vh;
-    grid-template-areas: "menu menu" "principal principal" "foto foto" "proceso proceso" "footer footer";
+    grid-template-areas: "menu menu"
+ "principal principal"
+ "foto foto"
+ "proceso proceso"
+ "footer footer";
     height: 1500px; }
     .contenedor .menu {
       display: flex;
@@ -743,8 +834,7 @@
       grid-area: menu; }
       .contenedor .menu a {
         text-decoration: none;
-        color: #f2f1f1;
-        font-size: 0.8rem; }
+        color: #f2f1f1; }
       .contenedor .menu ul {
         display: flex;
         align-items: center;
@@ -761,10 +851,13 @@
           border: none;
           padding: 0.5rem 2rem;
           border-radius: 2rem;
-          font-weight: bold; }
+          font-weight: bold;
+          transition: 0.3s; }
           .contenedor .menu ul li button a {
             text-decoration: none;
             color: #f2f1f1; }
+        .contenedor .menu ul li button:hover {
+          background-color: #E68484; }
       .contenedor .menu .navbar {
         display: contents; }
         .contenedor .menu .navbar .container-fluid {
@@ -800,6 +893,7 @@
         flex-direction: column;
         align-items: center;
         transform: scale(1.3);
+        width: 70%;
         gap: 1rem; }
         .contenedor .proceso .opciones div {
           padding: 5%;
@@ -818,8 +912,7 @@
     grid-area: menu; }
     .contenedor-servicios .menu a {
       text-decoration: none;
-      color: #f2f1f1;
-      font-size: 0.8rem; }
+      color: #f2f1f1; }
     .contenedor-servicios .menu ul {
       display: flex;
       align-items: center;
@@ -836,10 +929,13 @@
         border: none;
         padding: 0.5rem 2rem;
         border-radius: 2rem;
-        font-weight: bold; }
+        font-weight: bold;
+        transition: 0.3s; }
         .contenedor-servicios .menu ul li button a {
           text-decoration: none;
           color: #f2f1f1; }
+      .contenedor-servicios .menu ul li button:hover {
+        background-color: #E68484; }
     .contenedor-servicios .menu .navbar {
       display: contents; }
       .contenedor-servicios .menu .navbar .container-fluid {
@@ -876,8 +972,7 @@
       grid-area: menu; }
       .contenedor-materiales .menu a {
         text-decoration: none;
-        color: #f2f1f1;
-        font-size: 0.8rem; }
+        color: #f2f1f1; }
       .contenedor-materiales .menu ul {
         display: flex;
         align-items: center;
@@ -894,10 +989,13 @@
           border: none;
           padding: 0.5rem 2rem;
           border-radius: 2rem;
-          font-weight: bold; }
+          font-weight: bold;
+          transition: 0.3s; }
           .contenedor-materiales .menu ul li button a {
             text-decoration: none;
             color: #f2f1f1; }
+        .contenedor-materiales .menu ul li button:hover {
+          background-color: #E68484; }
       .contenedor-materiales .menu .navbar {
         display: contents; }
         .contenedor-materiales .menu .navbar .container-fluid {
@@ -912,7 +1010,12 @@
       gap: 15rem;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-areas: "img-uno" "img-dos" "img-tres" "img-cuatro" "img-cinco" "img-seis"; }
+      grid-template-areas: "img-uno"
+ "img-dos"
+ "img-tres"
+ "img-cuatro"
+ "img-cinco"
+ "img-seis"; }
       .contenedor-materiales .grilla-materiales img {
         transform: scale(1.5); }
     .contenedor-materiales .principal .centrado {
@@ -938,8 +1041,7 @@
     grid-area: menu; }
     .contenedor-nosotros .menu a {
       text-decoration: none;
-      color: #f2f1f1;
-      font-size: 0.8rem; }
+      color: #f2f1f1; }
     .contenedor-nosotros .menu ul {
       display: flex;
       align-items: center;
@@ -956,10 +1058,13 @@
         border: none;
         padding: 0.5rem 2rem;
         border-radius: 2rem;
-        font-weight: bold; }
+        font-weight: bold;
+        transition: 0.3s; }
         .contenedor-nosotros .menu ul li button a {
           text-decoration: none;
           color: #f2f1f1; }
+      .contenedor-nosotros .menu ul li button:hover {
+        background-color: #E68484; }
     .contenedor-nosotros .menu .navbar {
       display: contents; }
       .contenedor-nosotros .menu .navbar .container-fluid {
@@ -995,8 +1100,7 @@
     grid-area: menu; }
     .contenedor-cotiza .menu a {
       text-decoration: none;
-      color: #f2f1f1;
-      font-size: 0.8rem; }
+      color: #f2f1f1; }
     .contenedor-cotiza .menu ul {
       display: flex;
       align-items: center;
@@ -1013,10 +1117,13 @@
         border: none;
         padding: 0.5rem 2rem;
         border-radius: 2rem;
-        font-weight: bold; }
+        font-weight: bold;
+        transition: 0.3s; }
         .contenedor-cotiza .menu ul li button a {
           text-decoration: none;
           color: #f2f1f1; }
+      .contenedor-cotiza .menu ul li button:hover {
+        background-color: #E68484; }
     .contenedor-cotiza .menu .navbar {
       display: contents; }
       .contenedor-cotiza .menu .navbar .container-fluid {
@@ -1055,10 +1162,15 @@
   .contenedor-cotiza .banner img {
     width: 50%; } }
 
+/*-----------------------------------Media querys dispositivos pequeños (480)-----------------------------------*/
 @media screen and (max-width: 480px) {
   .contenedor {
     grid-template-rows: 12vh auto auto auto 15vh;
-    grid-template-areas: "menu menu" "principal principal" "foto foto" "proceso proceso" "footer footer"; }
+    grid-template-areas: "menu menu"
+ "principal principal"
+ "foto foto"
+ "proceso proceso"
+ "footer footer"; }
     .contenedor .principal .centrado h1 {
       font-size: 1rem; }
     .contenedor .principal .centrado p {
@@ -1109,7 +1221,12 @@
     .contenedor-materiales .grilla-materiales {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-areas: "img-uno" "img-dos" "img-tres" "img-cuatro" "img-cinco" "img-seis";
+      grid-template-areas: "img-uno"
+ "img-dos"
+ "img-tres"
+ "img-cuatro"
+ "img-cinco"
+ "img-seis";
       height: auto;
       gap: 0rem;
       padding: 0; }
